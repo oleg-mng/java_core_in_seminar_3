@@ -43,6 +43,7 @@ public class Human extends BaseHuman{
     }
 
     public Human(String name, int maxRun, int maxJump) {
+
         System.out.println("Constructor");
         if (name == null || name.length() < 3) this.name = "noname";
         else this.name = name;
@@ -50,6 +51,11 @@ public class Human extends BaseHuman{
         this.maxRun = maxRun;
         this.maxJump = maxJump;
     }
+
+//    @Override
+//    String displayInfo() {
+//        return super.displayInfo();
+//    }
 
     @Override
     public String toString() {

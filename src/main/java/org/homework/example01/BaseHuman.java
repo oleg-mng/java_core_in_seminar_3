@@ -17,4 +17,7 @@ public class BaseHuman {
     public BaseHuman(String name) {
         this.name = name;
     }
+    final String displayInfo(){
+        return String.format("Name: %s", name);
+    }
 }
