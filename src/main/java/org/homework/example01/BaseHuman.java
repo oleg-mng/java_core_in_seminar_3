@@ -1,6 +1,6 @@
 package org.homework.example01;
 
-public class BaseHuman {
+public abstract class BaseHuman {
     private String name;
 
     public String getName() {
@@ -17,7 +17,6 @@ public class BaseHuman {
     public BaseHuman(String name) {
         this.name = name;
     }
-    final String displayInfo(){
-        return String.format("Name: %s", name);
-    }
+    abstract String displayInfo();
+//        return String.format("Name: %s", name);
 }

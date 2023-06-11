@@ -1,9 +1,27 @@
 package org.homework.example01;
 
-public class Human extends BaseHuman{
+public class Human extends BaseHuman implements Runner{
     private String name;
     private int maxRun;
     private int maxJump;
+
+    @Override
+    public boolean jump(int height) {
+        if(height < maxJump) {
+            System.out.printf("%s перепрыгнул стену высотой: %d\n", name, height);
+            return true;
+        }
+        else {
+            System.out.printf("%s не смог перепрыгнуть стену высотой: %d\n", name, height);
+            return false;
+        }
+
+    }
+
+    @Override
+    public boolean run(int length) {
+        return false;
+    }
 
     public String getName() {
         return name;
@@ -52,10 +70,10 @@ public class Human extends BaseHuman{
         this.maxJump = maxJump;
     }
 
-//    @Override
-//    String displayInfo() {
-//        return super.displayInfo();
-//    }
+    @Override
+    String displayInfo() {
+        return String.format("Name %s", name);
+    }
 
     @Override
     public String toString() {
@@ -65,4 +83,6 @@ public class Human extends BaseHuman{
                 ", maxJump=" + maxJump +
                 '}';
     }
+
+
 }
