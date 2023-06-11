@@ -1,9 +1,9 @@
 package org.homework.example01;
 
-public class Human {
-    private final String name;
-    private final int maxRun;
-    private final int maxJump;
+public class Human extends BaseHuman{
+    private String name;
+    private int maxRun;
+    private int maxJump;
 
     public String getName() {
         return name;
@@ -18,6 +18,7 @@ public class Human {
     }
 
     {
+        System.out.println("Initializer");
         name = "niname";
         maxRun = 1000;
         maxJump = 100;
@@ -42,6 +43,9 @@ public class Human {
     }
 
     public Human(String name, int maxRun, int maxJump) {
+        System.out.println("Constructor");
+        if (name == null || name.length() < 3) this.name = "noname";
+        else this.name = name;
         this.name = name;
         this.maxRun = maxRun;
         this.maxJump = maxJump;
