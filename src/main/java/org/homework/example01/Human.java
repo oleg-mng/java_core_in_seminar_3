@@ -8,7 +8,7 @@ public class Human extends BaseHuman implements Runner{
 
     {
         System.out.println("Initializer");
-        name = "niname";
+        name = "noname";
         maxRun = 1000;
         maxJump = 100;
     }
