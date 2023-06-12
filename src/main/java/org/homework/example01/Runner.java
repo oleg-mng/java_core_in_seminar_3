@@ -14,7 +14,7 @@ public interface Runner {
             return true;
         }
         else {
-            System.out.printf("%s не смог перепрыгнуть стену высотой: %d\n", getName(), height);
+            System.out.printf("%s не смог перепрыгнуть стену высотой: %d и выбыл \n", getName(), height);
             return false;
         }
 
@@ -25,7 +25,8 @@ public interface Runner {
             return true;
         }
         else {
-            System.out.printf("%s не смог пробежать дистанцию: %dм, пробежал только %d м\n", getName(), length, getMaxRun());
+            System.out.printf("%s не смог пробежать дистанцию: %dм, пробежал только %d м и выбыл\n",
+                    getName(), length, getMaxRun());
             return false;
         }
     }

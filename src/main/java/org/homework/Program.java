@@ -14,25 +14,25 @@ public class Program {
         Runner[] runners = {
                 new Cat("Cat1", 999, 20),
                 new Cat("Cat2", 2000, 300),
-                new Robot("rrr", 200, 10),
-                new Robot("sgRt", 4000, 0),
+                new Robot("rTWpq", 200, 10),
+                new Robot("cWPjl", 1600, 300),
                 new Human("Denis", 500, 90),
                 new Human("Yury", 4000, 500),
         };
         Obstacle[] obstacles = {
-                new Wall(1500),
+                new Wall(100),
                 new Track(1500),
-                new Wall(500),
+                new Wall(290),
                 new Track(700),
         };
         for (Runner runner : runners) {
             for (Obstacle obstacle : obstacles) {
                 if (obstacle instanceof Track) {
-                    runner.run(obstacle.getLength());
+                    if (!runner.run(obstacle.getLength()))
                     break;
                 }
                 if (obstacle instanceof Wall) {
-                    runner.jump(obstacle.getHeight());
+                    if (!runner.jump(obstacle.getHeight()))
                     break;
                 }
 

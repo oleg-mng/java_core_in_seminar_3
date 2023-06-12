@@ -1,6 +1,7 @@
 package org.homework.example01;
 
-public class Robot extends BaseRobot implements Runner{
+public class Robot extends BaseRobot implements Runner {
+
     private String name;
     private int maxRun;
     private int maxJump;
@@ -13,16 +14,17 @@ public class Robot extends BaseRobot implements Runner{
 
     @Override
     public int getMaxJump() {
-        return 0;
+        return maxJump;
     }
 
     @Override
     public int getMaxRun() {
-        return 0;
+        return maxRun;
     }
 
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 }
+
