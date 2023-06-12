@@ -1,13 +1,24 @@
 package org.homework.example01;
 
 public class Cat extends Animal implements Runner{
+
+    private String name;
+    private int maxRun;
+    private int maxJump;
+
     @Override
-    public boolean jump(int height) {
-        return false;
+    public int getMaxJump() {
+        return maxJump;
     }
 
     @Override
-    public boolean run(int length) {
-        return false;
+    public int getMaxRun() {
+        return maxRun;
     }
+
+    @Override
+    public String getName() {
+        return name;
+    }
+
 }

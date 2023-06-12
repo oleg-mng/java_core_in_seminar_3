@@ -1,6 +1,6 @@
 package org.homework.example01;
 
-public abstract class BaseHuman {
+public abstract class BaseHuman implements Runner{
     private String name;
 
     public String getName() {

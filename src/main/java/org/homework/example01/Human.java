@@ -5,35 +5,6 @@ public class Human extends BaseHuman implements Runner{
     private int maxRun;
     private int maxJump;
 
-    @Override
-    public boolean jump(int height) {
-        if(height < maxJump) {
-            System.out.printf("%s перепрыгнул стену высотой: %d\n", name, height);
-            return true;
-        }
-        else {
-            System.out.printf("%s не смог перепрыгнуть стену высотой: %d\n", name, height);
-            return false;
-        }
-
-    }
-
-    @Override
-    public boolean run(int length) {
-        return false;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getMaxRun() {
-        return maxRun;
-    }
-
-    public int getMaxJump() {
-        return maxJump;
-    }
 
     {
         System.out.println("Initializer");
@@ -84,5 +55,18 @@ public class Human extends BaseHuman implements Runner{
                 '}';
     }
 
+    @Override
+    public String getName() {
+        return name;
+    }
 
+    @Override
+    public int getMaxRun() {
+        return maxRun;
+    }
+
+    @Override
+    public int getMaxJump() {
+        return maxJump;
+    }
 }
